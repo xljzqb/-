@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      overflow: hidden;
+      margin: 100px auto;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+    div::after {
+      content: "enenenen";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: skyblue;
+      transform: rotate(180deg);
+      transform-origin: left bottom;
+      transition: all 0.7s;
+    }
+    div:hover::after {
+      transform: rotate(0deg);
+    }
+  </style>
+  <body>
+    <div></div>
+  </body>
+</html>
